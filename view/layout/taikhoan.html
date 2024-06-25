@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Homepage.css">
+    <link rel="shortcut icon" href="Image/Logo.png">
+
+    <link rel="stylesheet" href="taikhoan.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Alice:regular"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+    <title>My Account</title>
+</head>
+<body>
+    <nav>
+        <img src="Image/Logo.png" height="60px">
+        <div class="menu">
+            <a href="Index.html">Trang chủ</a>
+            <a href="#">Thương hiệu</a>
+            <a href="Products.html">Sản phẩm</a>
+            <a href="donhang.html">Đơn hàng</a>
+            <a href="Contact.html">Liên hệ</a>
+        </div>
+        <div class="nav-icons">
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="Cart.html"><i class="fa fa-shopping-cart"></i></a>
+            <a href="Login.html"><i class="fa fa-user"></i></a>
+            <i class="fas fa-bars icon-sub-menu" onclick="appear()"></i>
+        </div>
+    </nav>
+    <div class="sub-menu">
+        <a href="Index.html">Trang chủ</a>
+        <a href="#">Thương hiệu</a>
+        <a href="Products.html">Sản phẩm</a>
+        <a href="donhang.html">Đơn hàng</a>
+        <a href="Contact.html">Liên hệ</a>
+    </div>
+    <div class="sub-menu-signout">
+        <a href="#">Quản lý</a>
+        <a href="#">Lịch sử</a>
+        <a onclick="signoutLogin()" href="Contact.html">Đăng suất</a>
+    </div>
+    <script>
+        var subMenu=document.getElementsByClassName('sub-menu')[0];
+        function appear(){
+            if (subMenu.style.display==='none'){
+                subMenu.style.display='block';
+            }else{
+                subMenu.style.display='none';
+            }
+        }
+    </script>
+    <div class="container">
+        <div class="title">
+            <h1>Tài khoản</h1>
+            <img class="title-left" src="Image/image-news6.png" alt="">
+            <img class="title-right" src="Image/Product2.png" alt="">
+        </div>
+        <article class="taikhoan-layout">
+            <aside class="left-menu">
+                <div class="taikhoan"> 
+                    <img src="Image/Image-customer.jpg" alt="">
+                    <p>dotuankiet</p>
+                </div>
+                <hr>
+                <p class="hienthi">Cập nhật thông tin</p>
+                <p>Đổi mật khẩu</p>
+                <p class="dangxuat">Đăng xuất</p>
+            </aside>
+            <section class="capnhat">
+                <div class="capnhat-top">
+                    <h2>Cập nhật thông tin</h2>
+                    <hr>
+                </div>
+                <div class="capnhat-bottom">
+                    <div class="capnhat-left">
+                        <table>
+                            <tr>
+                                <td class="label">
+                                    <label for="">Tên đăng nhập</label>
+                                </td>
+                                <td><input type="text" value="dotuankiet"><br>
+                                </td>
+                            </tr>
+                            <tr><td class="label"><label for="">Họ và tên</label></td>
+                                <td><input type="text" placeholder="Nhập họ và tên"></td>
+                            </tr>
+                            <tr>
+                                <td class="label"><label for="">Email</label></td>
+                                <td><p>ho************@gmail.com</p></td>
+                            </tr>
+                            <tr>
+                                <td class="label"><label for="">Số điện thoại</label></td>
+                                <td><input type="text" placeholder="Nhập số điện thoại"></td>
+                            </tr>
+                            <tr>
+                                <td class="label"><label for="">Giới tính</label></td>
+                                <td><input type="radio"> 
+                                    <label class="label-radio" for="">Nam</label>
+                                    <input type="radio"> 
+                                    <label class="label-radio" for="">Nữ</label>
+                                    <input type="radio"> 
+                                    <label class="label-radio" for="">Khác</label></td>
+                            </tr>
+                            <tr><td class="label"><label for="">Ngày sinh</label></td>
+                                <td><select>
+                                    <option selected value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                    <option value="">7</option>
+                                    <option value="">8</option>
+                                    <option value="">9</option>
+                                    <option value="">10</option>
+                                    <option value="">11</option>
+                                    <option value="">12</option>
+                                    <option value="">13</option>
+                                    <option value="">14</option>
+                                    <option value="">15</option>
+                                    <option value="">16</option>
+                                    <option value="">17</option>
+                                    <option value="">18</option>
+                                    <option value="">19</option>
+                                    <option value="">20</option>
+                                    <option value="">21</option>
+                                    <option value="">22</option>
+                                    <option value="">23</option>
+                                    <option value="">24</option>
+                                    <option value="">25</option>
+                                    <option value="">26</option>
+                                    <option value="">27</option>
+                                    <option value="">28</option>
+                                    <option value="">29</option>
+                                    <option value="">30</option>
+                                    <option value="">31</option>
+                                </select>
+                                <select>
+                                    <option selected value="">Tháng 1</option>
+                                    <option value="">Tháng 2</option>
+                                    <option value="">Tháng 3</option>
+                                    <option value="">Tháng 4</option>
+                                    <option value="">Tháng 5</option>
+                                    <option value="">Tháng 6</option>
+                                    <option value="">Tháng 7</option>
+                                    <option value="">Tháng 8</option>
+                                    <option value="">Tháng 9</option>
+                                    <option value="">Tháng 10</option>
+                                    <option value="">Tháng 11</option>
+                                    <option value="">Tháng 12</option>
+                                </select>
+                                <select class="nhapnam">
+                                    <option selected value="">1990</option>
+                                    <option value="">1991</option>
+                                    <option value="">1992</option>
+                                    <option value="">1993</option>
+                                    <option value="">1994</option>
+                                    <option value="">1995</option>
+                                    <option value="">1996</option>
+                                    <option value="">1997</option>
+                                    <option value="">1998</option>
+                                    <option value="">1999</option>
+                                    <option value="">2000</option>
+                                    <option value="">2001</option>
+                                    <option value="">2002</option>
+                                    <option value="">2003</option>
+                                    <option value="">2004</option>
+                                    <option value="">2005</option>
+                                    <option value="">2006</option>
+                                    <option value="">2007</option>
+                                    <option value="">2008</option>
+                                    <option value="">2009</option>
+                                    <option value="">2010</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td class="label"><label for="">Địa chỉ</label></td>
+                                <td>
+                                    <input type="text" placeholder="Nhập địa chỉ">
+                                </td>
+                            </tr>
+                            </table>
+                            <button>Lưu</button>
+                    </div>
+                    <div class="capnhat-right">
+                        <img src="Image/Image-customer.jpg" alt="">
+                        <input class="taianh" onchange="taianh()" type="file" placeholder="Chọn ảnh">
+                        <p>Dụng lượng file tối đa <br>1 MB
+                            Định dạng:.JPEG, .PNG</p>
+                    </div>
+                </div>
+            </section>
+            <!-- <script>
+                function taianh(){
+                    // document.getElementsByClassName('capnhat-right')[0].children[0].src=document.getElementsByClassName('taianh')[0].value;
+
+                    console.log(document.getElementsByClassName('taianh')[0].value);
+                }
+            </script> -->
+        </article>
+    </div>
+    <footer>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <div class="footer-layout">
+            <div class="support">
+                <h1>Trợ giúp khách hàng</h1>
+                <p>
+                    Về chúng tôi <br>
+                    Chính sách bảo mật <br>
+                    Chính sách cookie <br>
+                    Chính sách bán hàng <br>
+                    Chính sách hậu mãi <br>
+                    Chính sách vận chuyển <br>
+                    Chính sách hoàn tiền <br>
+                    Bảo hành và sửa chữa đồng hồ
+                </p>
+            </div>
+            <div class="link">
+                <h1>Liên hệ website</h1>
+                <p>Trang chủ <br>
+                    Thương hiệu <br>
+                    Đồng hồ nam <br>
+                    Đồng hồ nữ <br>
+                    Đồng hồ đôi <br>
+                    Giỏ hàng <br>
+                    Đăng nhập <br>
+                    Đăng ký</p>
+            </div>
+            <div class="contact">
+                <h1>Liên hệ</h1>
+                <p>Facebook: Luxuryshopping <br>
+                    Gmail: Luxuryshop.vn <br>
+                    Hotline: 0988556325</p>
+                <img src="Image/Logo.png" alt="">
+            </div>
+            <div class="info-company">
+                <h1>Công ty xuất nhập khẩu hàng hiệu hoa kỳ</h1>
+                <p>Địa chỉ: 331 Nguyễn Đình Chiểu, Phường 5, Quận 3, TP. HCM - Điện thoại: 1800 0091 | 
+                    028 3833 9999 | 028 7777 6677 | 024 7777 6677 - MST: 0312756049</p>
+            </div>
+        </div>
+    </footer>
+    <script src="Homepage.js"></script>
+</body>
+</html>

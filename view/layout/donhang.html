@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Homepage.css">
+    <link rel="shortcut icon" href="Image/Logo.png">
+
+    <link rel="stylesheet" href="donhang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Alice:regular" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Orders</title>
+</head>
+
+<body>
+    <nav>
+        <img src="Image/Logo.png" height="60px">
+        <div class="menu">
+            <a href="Index.html">Trang chủ</a>
+            <a href="#">Thương hiệu</a>
+            <a href="Products.html">Sản phẩm</a>
+            <a href="#">Đơn hàng</a>
+            <a href="Contact.html">Liên hệ</a>
+        </div>
+        <div class="nav-icons">
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="Cart.html"><i class="fa fa-shopping-cart"></i></a>
+            <a href="Login.html"><i class="fa fa-user"></i></a>
+            <i class="fas fa-bars icon-sub-menu" onclick="appear()"></i>
+        </div>
+    </nav>
+    <div class="sub-menu">
+        <a href="Index.html">Trang chủ</a>
+        <a href="#">Thương hiệu</a>
+        <a href="Products.html">Sản phẩm</a>
+        <a href="#">Đơn hàng</a>
+        <a href="Contact.html">Liên hệ</a>
+    </div>
+    <div class="sub-menu-signout">
+        <a href="#">Quản lý</a>
+        <a href="#">Lịch sử</a>
+        <a onclick="signoutLogin()" href="Contact.html">Đăng suất</a>
+    </div>
+    <script>
+        var subMenu = document.getElementsByClassName('sub-menu')[0];
+        function appear() {
+            if (subMenu.style.display === 'none') {
+                subMenu.style.display = 'block';
+            } else {
+                subMenu.style.display = 'none';
+            }
+        }
+    </script>
+    <div class="container">
+        <div class="title">
+            <h1>Đơn hàng</h1>
+            <img class="title-left" src="Image/image-news6.png" alt="">
+            <img class="title-right" src="Image/Product2.png" alt="">
+        </div>
+        <article class="donhang_layout">
+            <section class="noi_dung_don_hang">
+                <div class="menu-donhang">
+                    <p onclick="doidonhang(this)">Tất cả</p>
+                    <p onclick="doidonhang(this)">Chờ xác nhận</p>
+                    <p onclick="doidonhang(this)">Chờ lấy hàng</p>
+                    <p onclick="doidonhang(this)">Đang giao</p>
+                    <p onclick="doidonhang(this)">Hoàn thành</p>
+                </div>
+                <div class="box-don-hang">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Stt</th>
+                                <th>Mã đơn hàng</th>
+                                <th>Ngày đặt hàng</th>
+                                <th>Sẩn phẩm</th>
+                                <th>Người đặt hàng</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+
+                </div>
+            </section>
+            <img src="Image/Image_trangdonhang.png" alt="">
+        </article>
+    </div>
+    <script>
+        var donhang = [];
+        donhang[0] = ['125634', '12/6/2023', 'Omega Constellation', 'Đỗ Tuấn Kiệt'];
+        donhang[1]=['125655', '15/6/2023', 'Versace V-Tribute', 'Đỗ Tuấn Kiệt'];
+        donhang[2]=['125625', '16/6/2023', 'Omega Constellation', 'Đỗ Tuấn Kiệt'];
+        donhang[3]=['125689', '21/6/2023', 'Fossil Harwell', 'Đỗ Tuấn Kiệt'];
+        donhang[4]=['125698', '23/6/2023', 'Versace Eon Red', 'Đỗ Tuấn Kiệt'];
+        donhang[5]=['125646', '30/6/2023', 'Vacheron Constantin', 'Đỗ Tuấn Kiệt'];
+        console.log(donhang);
+        var boxdonhang = '';
+            for (let i = 0; i < donhang.length; i++) {
+                boxdonhang += `<tr>
+                                <td>${i+1}</td>
+                                <td>${donhang[i][0]}</td>
+                                <td>${donhang[i][1]}</td>
+                                <td>${donhang[i][2]}</td>
+                                <td>${donhang[i][3]}</td>
+                                <td><button>Chi tiết</button></td>
+                            </tr>`;
+            }
+            document.getElementsByClassName("box-don-hang")[0].getElementsByTagName('tbody')[0].innerHTML = boxdonhang;
+        function doidonhang(a) {
+            var menu_donhang = a.parentElement.children;
+            for (let i = 0; i < menu_donhang.length; i++) {
+                menu_donhang[i].style.backgroundColor = '#FBF2F2';
+            }
+            a.style.backgroundColor = 'white';
+        }
+        function tatca() {
+            var boxdonhang = '';
+            for (let i = 0; i < donhang.length; i++) {
+                boxdonhang += `<tr>
+                                <td>${i+1}</td>
+                                <td>${donhang[i][0]}</td>
+                                <td>${donhang[i][1]}</td>
+                                <td>${donhang[i][2]}</td>
+                                <td>${donhang[i][3]}</td>
+                                <td><button>Chi tiết</button></td>
+                            </tr>`;
+            }
+            document.getElementsByClassName("box-don-hang")[0].getElementsByTagName('tbody')[0].innerHTML = boxdonhang;
+        }
+        function choxacnhan() {
+            var boxdonhang = '';
+            for (let i = 0; i < donhang.length-1; i++) {
+                boxdonhang += `<tr>
+                                <td>${i+1}</td>
+                                <td>${donhang[i][0]}</td>
+                                <td>${donhang[i][1]}</td>
+                                <td>${donhang[i][2]}</td>
+                                <td>${donhang[i][3]}</td>
+                                <td><button>Chi tiết</button></td>
+                            </tr>`;
+            }
+            document.getElementsByClassName("box-don-hang")[0].getElementsByTagName('tbody')[0].innerHTML = boxdonhang;
+        }
+        function cholayhang() {
+            var boxdonhang = '';
+            for (let i = 0; i < donhang.length-3; i++) {
+                boxdonhang += `<tr>
+                                <td>${i+1}</td>
+                                <td>${donhang[i][0]}</td>
+                                <td>${donhang[i][1]}</td>
+                                <td>${donhang[i][2]}</td>
+                                <td>${donhang[i][3]}</td>
+                                <td><button>Chi tiết</button></td>
+                            </tr>`;
+            }
+            document.getElementsByClassName("box-don-hang")[0].getElementsByTagName('tbody')[0].innerHTML = boxdonhang;
+        }
+        function danggiao() {
+            var boxdonhang = '';
+            for (let i = 0; i < donhang.length-4; i++) {
+                boxdonhang += `<tr>
+                                <td>${i+1}</td>
+                                <td>${donhang[i][0]}</td>
+                                <td>${donhang[i][1]}</td>
+                                <td>${donhang[i][2]}</td>
+                                <td>${donhang[i][3]}</td>
+                                <td><button>Chi tiết</button></td>
+                            </tr>`;
+            }
+            document.getElementsByClassName("box-don-hang")[0].getElementsByTagName('tbody')[0].innerHTML = boxdonhang;
+        }
+        function hoanthanh() {
+            var boxdonhang = '';
+            for (let i = 0; i < donhang.length-5; i++) {
+                boxdonhang += `<tr>
+                                <td>${i+1}</td>
+                                <td>${donhang[i][0]}</td>
+                                <td>${donhang[i][1]}</td>
+                                <td>${donhang[i][2]}</td>
+                                <td>${donhang[i][3]}</td>
+                                <td><button>Chi tiết</button></td>
+                            </tr>`;
+            }
+            document.getElementsByClassName("box-don-hang")[0].getElementsByTagName('tbody')[0].innerHTML = boxdonhang;
+        }
+        document.getElementsByClassName('menu-donhang')[0].children[0].addEventListener('click', tatca);
+        document.getElementsByClassName('menu-donhang')[0].children[1].addEventListener('click', choxacnhan);
+        document.getElementsByClassName('menu-donhang')[0].children[2].addEventListener('click', cholayhang);
+        document.getElementsByClassName('menu-donhang')[0].children[3].addEventListener('click', danggiao);
+        document.getElementsByClassName('menu-donhang')[0].children[4].addEventListener('click', hoanthanh);
+    </script>
+    <footer>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <div class="footer-layout">
+            <div class="support">
+                <h1>Trợ giúp khách hàng</h1>
+                <p>
+                    Về chúng tôi <br>
+                    Chính sách bảo mật <br>
+                    Chính sách cookie <br>
+                    Chính sách bán hàng <br>
+                    Chính sách hậu mãi <br>
+                    Chính sách vận chuyển <br>
+                    Chính sách hoàn tiền <br>
+                    Bảo hành và sửa chữa đồng hồ
+                </p>
+            </div>
+            <div class="link">
+                <h1>Liên hệ website</h1>
+                <p>Trang chủ <br>
+                    Thương hiệu <br>
+                    Đồng hồ nam <br>
+                    Đồng hồ nữ <br>
+                    Đồng hồ đôi <br>
+                    Giỏ hàng <br>
+                    Đăng nhập <br>
+                    Đăng ký</p>
+            </div>
+            <div class="contact">
+                <h1>Liên hệ</h1>
+                <p>Facebook: Luxuryshopping <br>
+                    Gmail: Luxuryshop.vn <br>
+                    Hotline: 0988556325</p>
+                <img src="Image/Logo.png" alt="">
+            </div>
+            <div class="info-company">
+                <h1>Công ty xuất nhập khẩu hàng hiệu hoa kỳ</h1>
+                <p>Địa chỉ: 331 Nguyễn Đình Chiểu, Phường 5, Quận 3, TP. HCM - Điện thoại: 1800 0091 |
+                    028 3833 9999 | 028 7777 6677 | 024 7777 6677 - MST: 0312756049</p>
+            </div>
+        </div>
+    </footer>
+    <script src="Homepage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+:root{
+    --green-color:#21B846;
+    --main-color: #B83E34;
+    --font-pop: "Poppins", sans-serif;
+    --font-alice: "Alice", sans-serif;
+    --font-Sans: 'Source Sans Pro', sans-serif;
+
+}
+.container .title{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    height: 100px;
+    background-image: url('Image/background-page-child.jpg');
+    background-repeat: no-repeat;
+    background-size: right;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 1);
+    position: relative;
+}
+.title .title-left{
+    position: absolute;
+    height: 150px;
+    bottom: 0;
+}
+.title .title-right{
+    position: absolute;
+    height: 150px;
+    bottom: 0;
+    right: 10px;
+}
+.title h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-family: var(--font-pop);
+    text-align: center;
+    color: white;
+}
+.donhang_layout{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    min-height: 350px;
+}
+.donhang_layout>img{
+    width: 100%;
+    height: auto;
+}
+.noi_dung_don_hang .menu-donhang{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.noi_dung_don_hang .menu-donhang p{
+    font-size: 16px;
+    font-family: var(--font-pop);
+    width: 20%;
+    text-align: center;
+    padding: 4px 0;
+    /* border-top-left-radius: 8px;
+    border-top-right-radius: 8px; */
+    cursor: pointer;
+}
+.noi_dung_don_hang p:hover{
+    color: #B83E34;
+}
+.noi_dung_don_hang .box-don-hang{
+    background-color: white;
+    min-height: 340px;
+}
+.noi_dung_don_hang .menu-donhang p:nth-child(1){
+    background-color: white;
+}
+.cart-products{
+    padding: 20px;
+}
+.cart-product{
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 10px;
+    height: 140px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+ .cart-product img{
+    height: 120px;
+    margin-left: 25px;
+}
+.cart-product .info-cart-product>*{
+    margin: 15px 0;
+}
+.cart-products{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.cart-product:hover{
+    background-color: gainsboro;
+}
+.cart-product .info-cart-product h1{
+    font-family: var(--font-pop);
+    font-size: 15px;
+}
+.cart-product .info-cart-product h1{
+    font-family: var(--font-pop);
+    font-size: 15px;
+}
+.cart-product .info-cart-product .rating i{
+    font-size: 15px;
+    color: orange;
+}
+.cart-product .info-cart-product .rating .star5{
+    color: black;
+}
+.cart-product .icon-cart{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.cart-product .control-cart>h1{
+    font-family: var(--font-pop);
+    font-size: 15px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+}
+.cart-product .control-cart i{
+    font-size: 15px;
+    border-radius: 50%;
+    padding: 10px;
+}
+.cart-product .control-cart i:hover{
+    color: white;
+    background-color: var(--main-color);
+}
+.cart-product .control-cart .icon-cart h1{
+    font-size: 20px;
+}
+ .cart-product .control-cart .icon-cart{
+    margin-left: 40px;
+}
+.cart-product .control-cart .trash{
+    font-size: 20px;
+    margin-left: 15px;
+}
+.cart-product .control-cart .quantity{
+    font-family: var(--font-pop);
+    font-size: 20px;
+}
+.box-don-hang{
+    padding: 10px;
+}
+.box-don-hang table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid gainsboro;
+    font-size: 14px;
+}
+.box-don-hang th{
+    font-weight: 500;
+    font-weight: 16px;
+    font-family: var(--font-pop);
+    background-color: grey;
+    color: white;
+}
+.box-don-hang table thead tr{
+    height: 40px;
+}
+.box-don-hang table tbody tr{
+    height: 60px;
+}
+.box-don-hang td{
+    text-align: center;
+}
+.box-don-hang button{
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    font-family: var(--font-Sans);
+    font-weight: 500;
+    background-color: var(--main-color);
+    color: white;
+}
+.box-don-hang button:hover{
+    background-color: white;
+    color: var(--main-color);
+    transition: all 0.5s ease-in-out;
+    border: 1px solid var(--main-color);
+}
